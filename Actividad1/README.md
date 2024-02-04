@@ -8,6 +8,7 @@ El kernel es una parte fundamental del sistema operativo que actúa como interme
      - Mayor rendimiento ya que las funciones del kernel se ejecutan de manera directa y eficiente.
      - Menor sobrecarga de cambio de contexto.
      - Linux es un ejemplo de un sistema operativo con un kernel monolítico.
+
      ![](./src/kenel-monolitico.png)
 
 2. **Kernel Microkernel:** Solo las funciones esenciales del kernel se ejecutan en el espacio del kernel, y los servicios adicionales se ejecutan como procesos separados fuera del kernel.
@@ -15,12 +16,14 @@ El kernel es una parte fundamental del sistema operativo que actúa como interme
      - Mayor modularidad y extensibilidad del sistema.
      - Menor tamaño del kernel y mayor estabilidad.
      - Ejemplos incluyen el kernel Mach utilizado en el sistema operativo macOS y algunos microkernels de sistemas embebidos.
+
      ![](./src/Kernel-microkernel.svg)
 
 3. **Kernel Híbrido:** Combina características de los kernels monolíticos y microkernels.
    - **Características:**
      - Ofrece la eficiencia de los kernels monolíticos y la modularidad de los microkernels.
      - Windows NT es un ejemplo de un sistema operativo con un kernel híbrido.
+
      ![](./src/kenel-hibrido.png)
 
 4. **Kernel Exokernel:** Delega la mayor parte de las decisiones de gestión de recursos a las aplicaciones en lugar de realizarlas en el kernel.
@@ -28,6 +31,7 @@ El kernel es una parte fundamental del sistema operativo que actúa como interme
      - Proporciona un mayor grado de control a las aplicaciones.
      - Requiere que las aplicaciones sean más conscientes y responsables de la gestión de recursos.
      - Se utiliza en entornos de investigación y desarrollo.
+
      ![](./src/kenel-exokernel.png)
 
 ## USER VS KERNEL MODE
@@ -38,7 +42,6 @@ La diferencia principal entre el modo usuario y el modo kernel es el nivel de ac
 - **Modo kernel:** Es un modo privilegiado y tiene acceso completo al hardware y recursos del sistema. Se utiliza para ejecutar el código del kernel, controladores de dispositivo y código del sistema operativo de bajo nivel. Un error en este modo puede provocar un fallo completo del sistema.
 
 <img src="./src/user-vs-kernel-mode.png" width="450">
-
 
 El paso entre el modo usuario y modo kernel requiere una llamada al sistema o una interrupción de hardware. Esto cambia del contexto de ejecución a uno supervisado por el kernel para acceder a recursos protegidos o proporcionar un servicio al proceso.
 
